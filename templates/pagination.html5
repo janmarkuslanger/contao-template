@@ -1,0 +1,19 @@
+<!-- indexer::stop -->
+<nav class="pagination" aria-label="<?= $this->pagination ?>">
+
+    <p class="pagination__total"><?= $this->total ?></p>
+  
+    <ul class="pagination__items">
+  
+      <?php foreach ($this->pages as $page): ?>
+        <?php if (null === $page['href']): ?>
+          <li class="pagination__item"><span class="pagination__number"><?= $page['page'] ?></span></li>
+        <?php else: ?>
+          <li class="pagination__item"><a class="pagination__number" href="<?= $page['href'] ?>" class="link" title="<?= $page['title'] ?>"><?= $page['page'] ?></a></li>
+        <?php endif; ?>
+      <?php endforeach; ?>
+    </ul>
+  
+  </nav>
+  <!-- indexer::continue -->
+  
